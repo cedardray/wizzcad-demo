@@ -1,0 +1,29 @@
+<table class="table table-striped table-hover" *ngIf="datas && datas.length > 0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>{{datas[0].forms[0].model.type.name}}</th>
+            <ng-container *ngIf="datas[0].forms && datas[0].forms.length > 0">
+                <th *ngFor="let value of datas[0].forms[0].values">
+                    {{value.field.name}}
+                </th>
+            </ng-container>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of datas">
+            <ng-container *ngFor="let form of data.forms">
+                <td>{{form.name}}</td>
+                <td>{{form.model.name}}</td>
+
+                <ng-container *ngFor="let value of form.values">
+                    <td>
+                        {{value.displayValue}}
+                    </td>
+                </ng-container>
+            </ng-container>
+        </tr>
+        </tbody>
+</table>
+
+<p *ngIf="!datas || datas.length === 0"> Aucune donnée à afficher</p>

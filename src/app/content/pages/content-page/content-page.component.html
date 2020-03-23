@@ -1,0 +1,6 @@
+<app-menu></app-menu>
+<div class="container">
+    <h1 class="page-head-line">Données utilisateur</h1>
+    <app-content *ngIf="data$ | async as datas" [datas]="datas"></app-content>
+    <app-pagination *ngIf="links$ | async as links" [links]="links" (goTo)="onGoTo($event)"></app-pagination>
+</div>

@@ -1,0 +1,6 @@
+<nav *ngIf="links">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" *ngIf="links.prev"><a class="page-link" (click)="previous()">Previous</a></li>
+      <li class="page-item" *ngIf="links.next"><a class="page-link" (click)="next()">Next</a></li>
+    </ul>
+  </nav>

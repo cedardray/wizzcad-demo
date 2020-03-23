@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%;
+}
+body{
+    padding-top: 70px;;
+}
+
+.page-head-line {
+    font-weight: 900;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #838383;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
